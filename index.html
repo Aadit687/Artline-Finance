@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artline Finance Pvt Ltd | NBFC | New Delhi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --b50:#EEF4FB;--b100:#D4E6F7;--b200:#A9CCF0;--b300:#74A9E3;--b400:#4586D0;
+  --b500:#2563AE;--b600:#1A4B8C;--b700:#123570;--b800:#0C2454;
+  --s50:#F6F8FB;--s100:#E8EDF5;--s300:#B0BAC8;--s500:#6B7A92;--s700:#3A4558;--s900:#1A2233;
+  --white:#fff;--gold:#C8A96E;
+  --fh:'Playfair Display',Georgia,serif;--fb:'DM Sans',system-ui,sans-serif;
+  --r:10px;--rl:16px;
+  --sh:0 1px 4px rgba(37,99,174,.07);--sm:0 4px 20px rgba(37,99,174,.10);--sl:0 8px 40px rgba(37,99,174,.14);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:var(--s700);background:var(--white);font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.container{max-width:1160px;margin:0 auto;padding:0 28px}
+.section{padding:80px 0}
+.section-alt{background:var(--s50)}
+.section-blue{background:var(--b500);color:var(--white)}
+.section-tag{display:inline-block;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--b500);background:var(--b50);border:1px solid var(--b100);padding:5px 14px;border-radius:30px;margin-bottom:14px}
+.section-tag.light{color:var(--b200);background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2)}
+.section-title{font-family:var(--fh);font-size:clamp(26px,3vw,36px);font-weight:600;color:var(--s900);line-height:1.25;margin-bottom:14px}
+.section-title.light{color:var(--white)}
+.section-sub{font-size:16px;color:var(--s500);max-width:600px;line-height:1.7}
+.section-sub.light{color:rgba(255,255,255,.78)}
+.section-header{margin-bottom:52px}
+.section-header.centered{text-align:center}
+.section-header.centered .section-sub{margin:0 auto}
+
+/* TOPBAR */
+.topbar{background:var(--b700);color:rgba(255,255,255,.8);font-size:13px;padding:8px 0}
+.topbar-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px}
+.topbar a{color:rgba(255,255,255,.8);text-decoration:none}
+.topbar a:hover{color:#fff}
+.topbar-right{display:flex;gap:20px}
+
+/* NAVBAR */
+.navbar{position:sticky;top:0;z-index:1000;background:var(--white);border-bottom:1px solid var(--s100);box-shadow:var(--sh)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{display:flex;flex-direction:column;text-decoration:none}
+.logo-name{font-family:var(--fh);font-size:22px;font-weight:600;color:var(--b600);line-height:1.1}
+.logo-tagline{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--s500)}
+.nav-links{display:flex;list-style:none;gap:4px;align-items:center}
+.nav-links a{text-decoration:none;font-size:14px;font-weight:400;color:var(--s700);padding:8px 14px;border-radius:6px;transition:background .2s,color .2s;white-space:nowrap}
+.nav-links a:hover{background:var(--b50);color:var(--b600)}
+.nav-cta{background:var(--b500)!important;color:var(--white)!important;padding:9px 20px!important;border-radius:6px!important;font-weight:500!important}
+.nav-cta:hover{background:var(--b600)!important}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--s700);margin:5px 0;border-radius:2px;transition:all .3s}
+.mobile-menu{display:none;background:var(--white);border-top:1px solid var(--s100);padding:16px 28px 20px}
+.mobile-menu a{display:block;text-decoration:none;color:var(--s700);font-size:15px;padding:10px 0;border-bottom:1px solid var(--s100)}
+.mobile-menu.open{display:block}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--b700) 0%,var(--b500) 60%,var(--b400) 100%);padding:90px 0 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-60px;top:-60px;width:420px;height:420px;border-radius:50%;background:rgba(255,255,255,.04);pointer-events:none}
+.hero::after{content:'';position:absolute;right:80px;bottom:-100px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.05);pointer-events:none}
+.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero-eyebrow::before{content:'';display:inline-block;width:28px;height:1px;background:var(--gold)}
+.hero-title{font-family:var(--fh);font-size:clamp(32px,4vw,50px);font-weight:600;color:var(--white);line-height:1.18;margin-bottom:22px}
+.hero-title span{color:var(--gold)}
+.hero-desc{font-size:16px;color:rgba(255,255,255,.8);line-height:1.75;margin-bottom:36px;max-width:480px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-primary{display:inline-block;padding:13px 28px;background:var(--white);color:var(--b600);border-radius:var(--r);font-weight:500;font-size:15px;text-decoration:none;border:2px solid var(--white);transition:background .2s,color .2s}
+.btn-primary:hover{background:var(--b50)}
+.btn-outline{display:inline-block;padding:13px 28px;background:transparent;color:var(--white);border-radius:var(--r);font-weight:500;font-size:15px;text-decoration:none;border:1.5px solid rgba(255,255,255,.5);transition:border-color .2s,background .2s}
+.btn-outline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+.hero-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.hero-card{background:rgba(255,255,255,.10);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.18);border-radius:var(--rl);padding:22px 20px;color:var(--white)}
+.hero-card-icon{font-size:26px;margin-bottom:10px}
+.hero-card-title{font-weight:500;font-size:15px;margin-bottom:5px}
+.hero-card-desc{font-size:13px;color:rgba(255,255,255,.72);line-height:1.5}
+
+/* TRUST BAR */
+.trust-bar{background:var(--white);border-bottom:1px solid var(--s100);padding:24px 0}
+.trust-bar-inner{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:10px}
+.trust-icon{width:36px;height:36px;background:var(--b50);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px}
+.trust-label{font-size:13px;color:var(--s500);line-height:1.3}
+.trust-label strong{display:block;font-size:14px;font-weight:500;color:var(--s900)}
+.trust-divider{width:1px;height:36px;background:var(--s100)}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img-block{background:linear-gradient(135deg,var(--b50) 0%,var(--b100) 100%);border-radius:var(--rl);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.about-img-icon{font-size:80px;opacity:.25}
+.about-badge{position:absolute;bottom:-18px;left:24px;background:var(--white);border:1px solid var(--s100);border-radius:var(--rl);padding:16px 22px;box-shadow:var(--sm);display:flex;align-items:center;gap:12px}
+.about-badge-num{font-family:var(--fh);font-size:28px;font-weight:600;color:var(--b600);line-height:1}
+.about-badge-text{font-size:13px;color:var(--s500);line-height:1.4}
+.about-visual{position:relative}
+.about-content{padding-top:10px}
+.about-content p{color:var(--s500);margin-bottom:20px;font-size:15.5px}
+.mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.mv-card{background:var(--b50);border-left:3px solid var(--b400);border-radius:0 var(--r) var(--r) 0;padding:18px 20px}
+.mv-card h4{font-family:var(--fh);font-size:15px;font-weight:600;color:var(--b700);margin-bottom:8px}
+.mv-card p{font-size:13.5px;color:var(--s500);margin:0;line-height:1.6}
+
+/* PRODUCTS */
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.product-card{background:var(--white);border:1px solid var(--s100);border-radius:var(--rl);padding:30px 26px;box-shadow:var(--sh);transition:transform .25s,box-shadow .25s,border-color .25s;cursor:default}
+.product-card:hover{transform:translateY(-4px);box-shadow:var(--sm);border-color:var(--b200)}
+.product-icon{width:52px;height:52px;background:var(--b50);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px;border:1px solid var(--b100)}
+.product-card h3{font-family:var(--fh);font-size:18px;font-weight:600;color:var(--s900);margin-bottom:10px}
+.product-card>p{font-size:14px;color:var(--s500);line-height:1.65;margin-bottom:18px}
+.product-features{list-style:none}
+.product-features li{font-size:13.5px;color:var(--s700);padding:5px 0;display:flex;align-items:flex-start;gap:8px;border-bottom:1px solid var(--s100)}
+.product-features li:last-child{border-bottom:none}
+.product-features li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--b400);margin-top:8px;flex-shrink:0}
+
+/* TEAM */
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.team-card{background:var(--white);border:1px solid var(--s100);border-radius:var(--rl);padding:30px 26px;box-shadow:var(--sh)}
+.team-avatar{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--b400),var(--b600));display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-size:22px;font-weight:600;color:var(--white);margin-bottom:16px;letter-spacing:1px}
+.team-card h3{font-family:var(--fh);font-size:18px;font-weight:600;color:var(--s900);margin-bottom:4px}
+.team-role{font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--b500);font-weight:500;margin-bottom:14px}
+.team-card p{font-size:14px;color:var(--s500);line-height:1.65}
+
+/* ELIGIBILITY */
+.eligibility-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.elig-box{background:var(--white);border:1px solid var(--s100);border-radius:var(--rl);padding:34px 30px;box-shadow:var(--sh)}
+.elig-box h3{font-family:var(--fh);font-size:20px;font-weight:600;color:var(--b700);margin-bottom:22px;padding-bottom:14px;border-bottom:1px solid var(--s100)}
+.elig-row{display:flex;align-items:flex-start;gap:14px;padding:11px 0;border-bottom:1px solid var(--s100)}
+.elig-row:last-child{border-bottom:none}
+.elig-dot{width:8px;height:8px;border-radius:50%;background:var(--b400);margin-top:6px;flex-shrink:0}
+.elig-row-content{display:flex;flex-direction:column;gap:2px}
+.elig-row-label{color:var(--s500);font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.8px}
+.elig-row-val{color:var(--s700);font-size:14px}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.testi-card{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.18);border-radius:var(--rl);padding:28px}
+.testi-quote{font-size:36px;line-height:1;color:var(--gold);margin-bottom:10px;font-family:Georgia,serif}
+.testi-text{font-size:15px;color:rgba(255,255,255,.88);line-height:1.7;margin-bottom:20px}
+.testi-author{font-weight:500;font-size:14px;color:var(--white)}
+.testi-org{font-size:12.5px;color:rgba(255,255,255,.6);margin-top:2px}
+
+/* CSR */
+.csr-inner{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.csr-content p{color:var(--s500);font-size:15.5px;line-height:1.75;margin-bottom:18px}
+.csr-highlight{background:var(--b50);border-left:3px solid var(--b400);border-radius:0 var(--r) var(--r) 0;padding:18px 22px;margin-top:24px}
+.csr-highlight h4{font-family:var(--fh);font-size:16px;color:var(--b700);margin-bottom:8px}
+.csr-highlight p{font-size:14px;color:var(--s500);margin:0}
+.csr-visual{background:linear-gradient(135deg,var(--b50) 0%,var(--b100) 100%);border-radius:var(--rl);aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:80px;opacity:.4}
+
+/* GRIEVANCE */
+.grievance-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.grievance-step{background:var(--white);border:1px solid var(--s100);border-radius:var(--rl);padding:28px 24px;box-shadow:var(--sh)}
+.step-num{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;background:var(--b500);color:var(--white);font-weight:500;font-size:15px;margin-bottom:14px}
+.grievance-step h4{font-family:var(--fh);font-size:16px;color:var(--s900);margin-bottom:8px}
+.grievance-step p{font-size:13.5px;color:var(--s500);line-height:1.6}
+.grievance-step .detail{font-size:13px;color:var(--s500);margin-top:10px;line-height:1.7}
+.grievance-step .detail strong{color:var(--s700)}
+.grievance-step .detail a{color:var(--b500);text-decoration:none}
+.rbi-note{background:var(--b50);border:1px solid var(--b100);border-radius:var(--r);padding:18px 24px;margin-top:28px;font-size:14px;color:var(--s600)}
+.rbi-note a{color:var(--b500)}
+
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+.contact-info-item{display:flex;align-items:flex-start;gap:16px;padding:18px 0;border-bottom:1px solid var(--s100)}
+.contact-info-item:first-child{border-top:1px solid var(--s100)}
+.contact-icon{width:40px;height:40px;background:var(--b50);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.contact-label{font-size:12px;color:var(--s400);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.contact-value{font-size:15px;color:var(--s700)}
+.contact-value a{color:var(--b500);text-decoration:none}
+.contact-form-box{background:var(--b50);border-radius:var(--rl);padding:34px 30px;border:1px solid var(--b100)}
+.contact-form-box h3{font-family:var(--fh);font-size:20px;color:var(--b700);margin-bottom:22px}
+.form-row{margin-bottom:16px}
+.form-row label{display:block;font-size:13px;font-weight:500;color:var(--s600);margin-bottom:6px}
+.form-row input,.form-row textarea,.form-row select{width:100%;padding:11px 14px;border:1px solid var(--s100);border-radius:var(--r);background:var(--white);font-family:var(--fb);font-size:14.5px;color:var(--s700);outline:none;transition:border-color .2s}
+.form-row input:focus,.form-row textarea:focus,.form-row select:focus{border-color:var(--b400)}
+.form-row textarea{resize:vertical;min-height:90px}
+.form-submit{width:100%;padding:13px;background:var(--b500);color:var(--white);border:none;border-radius:var(--r);font-family:var(--fb);font-size:15px;font-weight:500;cursor:pointer;transition:background .2s;margin-top:4px}
+.form-submit:hover{background:var(--b600)}
+
+/* FOOTER */
+.footer{background:var(--s900);color:rgba(255,255,255,.7);padding:60px 0 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:50px}
+.footer-brand .logo-name{color:var(--white);font-size:20px}
+.footer-brand .logo-tagline{color:rgba(255,255,255,.4)}
+.footer-brand p{font-size:13.5px;color:rgba(255,255,255,.55);line-height:1.7;margin-top:14px;max-width:260px}
+.footer-brand .rbi-reg{display:inline-block;margin-top:16px;font-size:12px;color:rgba(255,255,255,.5);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:6px 12px;border-radius:6px;line-height:1.5}
+.footer-col h4{font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:1.2px;color:rgba(255,255,255,.9);margin-bottom:18px}
+.footer-col ul{list-style:none}
+.footer-col ul li{margin-bottom:10px}
+.footer-col ul li a{font-size:14px;color:rgba(255,255,255,.55);text-decoration:none;transition:color .2s}
+.footer-col ul li a:hover{color:rgba(255,255,255,.9)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding:20px 0;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,.38);flex-wrap:wrap;gap:10px}
+.footer-bottom a{color:rgba(255,255,255,.45);text-decoration:none}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .hero-cards{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr}
+  .about-visual{display:none}
+  .eligibility-grid{grid-template-columns:1fr}
+  .csr-inner{grid-template-columns:1fr}
+  .csr-visual{display:none}
+  .contact-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .trust-divider{display:none}
+  .trust-bar-inner{justify-content:flex-start;gap:24px}
+  .nav-links{display:none}
+  .hamburger{display:block}
+}
+@media(max-width:600px){
+  .section{padding:60px 0}
+  .hero{padding:60px 0}
+  .hero-cards{grid-template-columns:1fr}
+  .mv-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .grievance-steps{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-inner">
+      <span>RBI Registered NBFC &nbsp;|&nbsp; Reg. No. B-14.03540 &nbsp;|&nbsp; Est. 1996</span>
+      <div class="topbar-right">
+        <a href="tel:+919999516164">+91-9999 516 164</a>
+        <a href="mailto:finance@artlinefinance.com">finance@artlinefinance.com</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-name">Artline Finance</span>
+        <span class="logo-tagline">Non-Banking Finance Company</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#team">Management</a></li>
+        <li><a href="#eligibility">Eligibility</a></li>
+        <li><a href="#csr">CSR</a></li>
+        <li><a href="#grievance">Grievance</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu">
+    <a href="#about" onclick="this.closest('.mobile-menu').classList.remove('open')">About Us</a>
+    <a href="#products" onclick="this.closest('.mobile-menu').classList.remove('open')">Products</a>
+    <a href="#team" onclick="this.closest('.mobile-menu').classList.remove('open')">Management</a>
+    <a href="#eligibility" onclick="this.closest('.mobile-menu').classList.remove('open')">Eligibility</a>
+    <a href="#csr" onclick="this.closest('.mobile-menu').classList.remove('open')">CSR</a>
+    <a href="#grievance" onclick="this.closest('.mobile-menu').classList.remove('open')">Grievance</a>
+    <a href="#contact" onclick="this.closest('.mobile-menu').classList.remove('open')">Contact Us</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-eyebrow">Trusted since 1996</div>
+        <h1 class="hero-title">Empowering <span>Individuals &amp; Businesses</span> with Accessible Finance</h1>
+        <p class="hero-desc">Artline Finance Pvt Ltd is a Reserve Bank of India registered Non-Banking Finance Company (NBFC) dedicated to providing transparent, ethical, and innovative financial solutions — with a focused approach on SME lending.</p>
+        <div class="hero-btns">
+          <a href="#products" class="btn-primary">Explore Products</a>
+          <a href="#contact" class="btn-outline">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-cards">
+        <div class="hero-card">
+          <div class="hero-card-icon">🏠</div>
+          <div class="hero-card-title">Loan Against Property</div>
+          <div class="hero-card-desc">Borrow up to 75% of market value with tenures up to 15 years.</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">📈</div>
+          <div class="hero-card-title">Business Loans</div>
+          <div class="hero-card-desc">Unsecured funding tailored to your business growth needs.</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">💼</div>
+          <div class="hero-card-title">Loan Against Shares</div>
+          <div class="hero-card-desc">Unlock capital without liquidating your investment portfolio.</div>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-icon">🔗</div>
+          <div class="hero-card-title">Vendor Finance</div>
+          <div class="hero-card-desc">Supply chain financing against invoices and purchase orders.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <div class="trust-item">
+        <div class="trust-icon">✅</div>
+        <div class="trust-label"><strong>RBI Registered</strong>Reg. No. B-14.03540</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">📅</div>
+        <div class="trust-label"><strong>Est. August 1996</strong>Nearly 3 decades of trust</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">🏢</div>
+        <div class="trust-label"><strong>SME Focus</strong>Tailored for businesses</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">🤝</div>
+        <div class="trust-label"><strong>Ethical Lending</strong>Transparent processes</div>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <div class="trust-icon">📍</div>
+        <div class="trust-label"><strong>New Delhi</strong>Bengali Market, 110001</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-img-block">
+          <div class="about-img-icon">🏛️</div>
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">28+</div>
+          <div class="about-badge-text">Years of<br>Financial Excellence</div>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="section-tag">About Us</div>
+        <h2 class="section-title">A Legacy of Trust in Financial Services</h2>
+        <p>Artline Finance Pvt Ltd (formerly known as Artline Vinimay Pvt Ltd) is a trusted Non-Banking Finance Company (NBFC) established on 9 August 1996, registered with the Reserve Bank of India (Registration Certificate No. B-14.03540).</p>
+        <p>We are dedicated to empowering individuals and businesses with accessible, transparent, and innovative financial solutions. With a specific focus on SME projects, we provide a wide range of customized financial services — ensuring clients from all backgrounds receive the right financial tools to achieve stability, growth, and long-term success.</p>
+        <div class="mv-grid">
+          <div class="mv-card">
+            <h4>Our Mission</h4>
+            <p>To make financial services straightforward, ethical, and accessible — bridging the gap between people and the financial resources they need for a secure future.</p>
+          </div>
+          <div class="mv-card">
+            <h4>Our Vision</h4>
+            <p>To become a leading financial solutions provider recognized for trust, innovation, and integrity — redefining how individuals and businesses approach financial planning.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="section section-alt" id="products">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">Financing Solutions</div>
+      <h2 class="section-title">Products We Offer</h2>
+      <p class="section-sub">Our lending services empower businesses and individuals to unlock their financial potential with products designed for diverse needs.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-icon">🏠</div>
+        <h3>Loan Against Property</h3>
+        <p>Convert your property's value into accessible capital. Manage urgent financial needs with flexible tenures and no end-use restrictions on the loan amount.</p>
+        <ul class="product-features">
+          <li>Borrow up to 75% of the property's market value</li>
+          <li>Loan tenure of up to 15 years</li>
+          <li>No foreclosure charges</li>
+          <li>No end-use restrictions on the loan amount</li>
+          <li>Quick disbursal with doorstep services</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">💳</div>
+        <h3>Unsecured Business Loans</h3>
+        <p>Fuel your business growth with a loan tailored to your unique needs — from working capital to infrastructure improvement, new unit setup, and scaling production.</p>
+        <ul class="product-features">
+          <li>Quick initial assessment within a week of document submission</li>
+          <li>Evaluated on repayment capability and financial valuation</li>
+          <li>Applicable for startups as well</li>
+          <li>Working capital and expansion funding</li>
+          <li>Solutions for diverse business requirements</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">📊</div>
+        <h3>Loan Against Shares</h3>
+        <p>Unlock liquidity without selling your equity shares, mutual funds, or marketable securities. Access capital while your long-term investment portfolio remains intact.</p>
+        <ul class="product-features">
+          <li>No need to liquidate your equity shares</li>
+          <li>Continued dividend benefits during the loan period</li>
+          <li>Quick disbursal</li>
+          <li>Competitive rates and simple terms</li>
+          <li>Flexible for business or personal financial needs</li>
+        </ul>
+      </div>
+      <div class="product-card">
+        <div class="product-icon">🔗</div>
+        <h3>Vendor &amp; Supplier Finance</h3>
+        <p>Empowering corporates to support their vendors and suppliers for a more efficient supply chain — financing against invoices, purchase orders, and work orders.</p>
+        <ul class="product-features">
+          <li>Loan against invoice, purchase order, or work order</li>
+          <li>Improved cash flow for suppliers</li>
+          <li>Reduced cost of capital compared to traditional lending</li>
+          <li>Strengthens supplier relationships and loyalty</li>
+          <li>Enhances supply chain resilience and efficiency</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MANAGEMENT -->
+<section class="section" id="team">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">Leadership</div>
+      <h2 class="section-title">Our Management Team</h2>
+      <p class="section-sub">Experienced professionals guiding Artline Finance with decades of expertise in finance, banking, and business operations.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">SS</div>
+        <h3>Sanjay Singhal</h3>
+        <div class="team-role">Managing Director</div>
+        <p>Sanjay Singhal has traditionally been engaged in the distribution of FMCG products for the last two generations. His other business ventures include rentals from warehouses and commercial properties. Under his leadership, Artline Finance is fast becoming recognized as a niche player in the financial sector.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">AS</div>
+        <h3>Anita Singhal</h3>
+        <div class="team-role">Director</div>
+        <p>Anita Singhal brings a wealth of experience and a unique perspective to Artline Finance. She has been actively involved in business and strategic decision-making processes of the company, with a background in managing various family-owned businesses — honing her skills in administration and operations.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">VP</div>
+        <h3>Vikram Panwar</h3>
+        <div class="team-role">Director</div>
+        <p>An ex-banking industry professional with over 20 years of experience in retail lending products, covering Mortgages, Commercial Vehicle finance, Construction Equipment finance, and Unsecured Business loans. He has spent 12 of these years in Credit Risk Management roles at GE Capital, Standard Chartered Bank, and Deutsche Bank in India.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ELIGIBILITY -->
+<section class="section section-alt" id="eligibility">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">Loan Eligibility</div>
+      <h2 class="section-title">Check Your Eligibility</h2>
+      <p class="section-sub">Before applying for a loan, ensure you qualify by reviewing the eligibility criteria and the list of required documents below.</p>
+    </div>
+    <div class="eligibility-grid">
+      <div class="elig-box">
+        <h3>Eligibility Criteria</h3>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Nationality</span>
+            <span class="elig-row-val">Indian citizen</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Minimum Age</span>
+            <span class="elig-row-val">21 years at the time of application</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Maximum Age</span>
+            <span class="elig-row-val">70 years at loan maturity</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Credit History</span>
+            <span class="elig-row-val">Good credit history required</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Constitution Type</span>
+            <span class="elig-row-val">Self-employed individuals, Proprietorships, Partnerships, or Private Limited companies. Business must be operating for a minimum of 3 years.</span>
+          </div>
+        </div>
+      </div>
+      <div class="elig-box">
+        <h3>Documents Required</h3>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Identity &amp; Address</span>
+            <span class="elig-row-val">Aadhaar Card and Business PAN</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Proof of Business</span>
+            <span class="elig-row-val">Business must be at least 1 year old with valid business proof</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Bank Statement</span>
+            <span class="elig-row-val">Current Account statement for 1 year</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Financial Documents</span>
+            <span class="elig-row-val">Audited financials and Income Tax Returns filed for the last 2 years</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">GST Returns</span>
+            <span class="elig-row-val">GST return for at least 1 year</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Existing Loans</span>
+            <span class="elig-row-val">Sanction Letter and Statement of Account (SOA) for all loans from other financial institutions and banks</span>
+          </div>
+        </div>
+        <div class="elig-row">
+          <div class="elig-dot"></div>
+          <div class="elig-row-content">
+            <span class="elig-row-label">Property Documents</span>
+            <span class="elig-row-val">Copy of title documents and approved sanction plan (for Loan Against Property)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section section-blue" id="testimonials">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag light">Client Testimonials</div>
+      <h2 class="section-title light">What Our Clients Say</h2>
+      <p class="section-sub light">We take pride in delivering exceptional service and building long-term relationships founded on trust and reliability.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I am satisfied with the services provided by the Company. The staff were professional, helpful, and responsive to my needs. My transactions were handled efficiently, and I found the overall experience to be smooth and reliable. Thank you for your continued support and quality service.</p>
+        <div class="testi-author">Mr. Aman Jain</div>
+        <div class="testi-org">Partner, MCC India</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I am satisfied with the services and the professionalism of the staff. Overall, my experience has been positive. The team demonstrated a high level of commitment and dedication throughout our engagement with Artline Finance.</p>
+        <div class="testi-author">Mr. Arun Gupta</div>
+        <div class="testi-org">Managing Director, M/s Transline Technologies Limited</div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">I particularly appreciate the friendly atmosphere at the office and the quick resolution of my recent query. It makes managing my finances so much simpler. I would highly recommend Artline Finance to others seeking financial assistance.</p>
+        <div class="testi-author">Mr. Kirti Mediratta</div>
+        <div class="testi-org">Partner, M/s Tehani Creations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CSR -->
+<section class="section" id="csr">
+  <div class="container">
+    <div class="csr-inner">
+      <div class="csr-content">
+        <div class="section-tag">Corporate Social Responsibility</div>
+        <h2 class="section-title">Our Commitment to Society</h2>
+        <p>Artline Finance Private Limited strongly believes that Corporate Social Responsibility is connected with the principles of sustainable growth. We recognize the immense opportunity we have to bring about a positive change in the lives of communities through our business operations and CSR activities.</p>
+        <p>As part of our Corporate Social Responsibility, we actively implement projects and initiatives for the betterment of society, with a focus on creating meaningful and lasting impact in the communities we serve.</p>
+        <div class="csr-highlight">
+          <h4>Education — Key Focus Area</h4>
+          <p>We support quality education for underprivileged children, with special emphasis on children from marginalized communities. Our initiatives aim to improve educational standards by strengthening existing infrastructure and providing basic facilities for learning.</p>
+        </div>
+      </div>
+      <div class="csr-visual">📚</div>
+    </div>
+  </div>
+</section>
+
+<!-- GRIEVANCE -->
+<section class="section section-alt" id="grievance">
+  <div class="container">
+    <div class="section-header centered">
+      <div class="section-tag">Grievance Redressal</div>
+      <h2 class="section-title">Grievance Redressal Mechanism</h2>
+      <p class="section-sub">We are committed to resolving your concerns promptly and fairly. Please follow the escalation process below.</p>
+    </div>
+    <div class="grievance-steps">
+      <div class="grievance-step">
+        <div class="step-num">1</div>
+        <h4>General Support</h4>
+        <p>Contact our customer support team for any query or complaint. Write to us at our registered office address or reach out via email or phone during business hours.</p>
+        <div class="detail">
+          <strong>Hours:</strong> 10:00 am – 6:00 pm (Mon–Fri)<br>
+          <a href="mailto:finance@artlinefinance.com">finance@artlinefinance.com</a><br>
+          <a href="tel:+919999516164">+91-9999 516 164</a><br>
+          8, Todarmal Lane, Bengali Market,<br>New Delhi – 110001
+        </div>
+      </div>
+      <div class="grievance-step">
+        <div class="step-num">2</div>
+        <h4>Grievance Redressal Officer</h4>
+        <p>If the resolution at Level 1 does not meet your expectation, you may escalate your complaint to our designated Grievance Redressal Officer.</p>
+        <div class="detail">
+          <strong>Mr. Mahesh Kumar Sinha</strong><br>
+          <a href="mailto:Credit.operations@artlinefinance.com">Credit.operations@artlinefinance.com</a><br>
+          <a href="tel:+918076643249">+91-8076 643 249</a>
+        </div>
+      </div>
+      <div class="grievance-step">
+        <div class="step-num">3</div>
+        <h4>Principal Nodal Officer</h4>
+        <p>If the resolution at Level 2 does not meet your expectation, you may approach our Principal Nodal Officer for further redressal.</p>
+        <div class="detail">
+          <strong>Mr. Vikram Panwar</strong><br>
+          <a href="mailto:vikram@artlinefinance.com">vikram@artlinefinance.com</a><br>
+          <a href="tel:+919873251055">+91-9873 251 055</a>
+        </div>
+      </div>
+      <div class="grievance-step">
+        <div class="step-num">4</div>
+        <h4>RBI Ombudsman</h4>
+        <p>If your complaint remains unresolved after one month from the date of complaint, you may approach the RBI Ombudsman / Regional Office of Dept. of Supervision – RBI.</p>
+        <div class="detail">
+          <a href="mailto:crpc@rbi.org.in">crpc@rbi.org.in</a><br>
+          Centralized Receipt and Processing Centre (CRPC),<br>
+          Reserve Bank of India, Central Vista,<br>
+          Sector 17, Chandigarh – 160017
+        </div>
+      </div>
+    </div>
+    <div class="rbi-note">
+      <strong>Note:</strong> If the customer's query or complaint is not resolved within a period of one month from the date of complaint, the customer may also approach the RBI Ombudsman through the Complaint Management System (CMS) Portal at <a href="https://cms.rbi.org.in" target="_blank">cms.rbi.org.in</a>. Alternatively, write to: <a href="mailto:crpc@rbi.org.in">crpc@rbi.org.in</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-tag">Contact Us</div>
+      <h2 class="section-title">Get in Touch</h2>
+      <p class="section-sub">We would be happy to assist you. Reach out to us through any of the channels below or fill in the enquiry form and we will get back to you promptly.</p>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Office Address</div>
+            <div class="contact-value">8 GF, Todarmal Lane, Bengali Market,<br>New Delhi – 110001</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">
+              <a href="tel:+919999516164">+91-9999 516 164</a><br>
+              <a href="tel:+918076643249">+91-8076 643 249</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">
+              <a href="mailto:finance@artlinefinance.com">finance@artlinefinance.com</a><br>
+              <a href="mailto:Credit.operations@artlinefinance.com">Credit.operations@artlinefinance.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Business Hours</div>
+            <div class="contact-value">Monday to Friday<br>10:00 am – 6:00 pm</div>
+          </div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-icon">🏛️</div>
+          <div>
+            <div class="contact-label">RBI Registration</div>
+            <div class="contact-value">Certificate No. B-14.03540<br>Registered as NBFC since 9 August 1996</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-box">
+        <h3>Send Us an Enquiry</h3>
+        <div class="form-row">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your full name">
+        </div>
+        <div class="form-row">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+        <div class="form-row">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com">
+        </div>
+        <div class="form-row">
+          <label>Product of Interest</label>
+          <select>
+            <option value="">Select a product</option>
+            <option>Loan Against Property</option>
+            <option>Unsecured Business Loan</option>
+            <option>Loan Against Shares</option>
+            <option>Vendor &amp; Supplier Finance</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label>Message</label>
+          <textarea placeholder="Briefly describe your requirement..."></textarea>
+        </div>
+        <button class="form-submit" onclick="alert('Thank you for your enquiry. Our team will get back to you shortly.')">Submit Enquiry</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-name">Artline Finance</span>
+          <span class="logo-tagline">Non-Banking Finance Company</span>
+        </div>
+        <p>Formerly known as Artline Vinimay Pvt Ltd. Established in 1996 and committed to empowering individuals and businesses with ethical, accessible, and innovative financial solutions.</p>
+        <div class="rbi-reg">RBI Registered NBFC &nbsp;|&nbsp; Reg. No. B-14.03540</div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#products">Our Products</a></li>
+          <li><a href="#team">Management Team</a></li>
+          <li><a href="#eligibility">Loan Eligibility</a></li>
+          <li><a href="#csr">CSR Policy</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#products">Loan Against Property</a></li>
+          <li><a href="#products">Business Loans</a></li>
+          <li><a href="#products">Loan Against Shares</a></li>
+          <li><a href="#products">Vendor &amp; Supplier Finance</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#grievance">Grievance Redressal</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li><a href="mailto:finance@artlinefinance.com">Email Support</a></li>
+          <li><a href="https://cms.rbi.org.in" target="_blank">RBI CMS Portal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2025 Artline Finance Pvt Ltd. All rights reserved. &nbsp;|&nbsp; Registered Office: 8 GF, Todarmal Lane, Bengali Market, New Delhi – 110001</span>
+      <span>RBI Reg. No. B-14.03540</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
